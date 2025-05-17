@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const titulo = document.querySelector(".bienvenida h1");
 
+if (titulo) {
   titulo.addEventListener("mouseenter", () => {
     titulo.classList.add("resaltar");
   });
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   titulo.classList.add("animar-entrada");
+}
 
   const explorarBtn = document.getElementById("explorar-btn");
 

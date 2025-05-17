@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
     <script defer src="../js/script.js"></script>
+    <script defer src="../js/simulacion_1.js"></script>
+    <script defer src="../js/simulacion_2.js"></script>
 </head>
 <body>
-    <header id="main-header">
+<header id="main-header">
     <div class="container">
       <div class="logo">
         <img src="../assets/logo.jfif" alt="ElectroMag Academy" />
@@ -24,5 +26,78 @@
       </nav>
     </div>
   </header>
+  <main>
+    <section class="simulacion-container">
+      <h2>🔬 Ley de Gauss - Esfera cargada animada</h2>
+      <div class="simulacion-controles">
+        <label>
+          Carga Q (C): <input type="number" id="Q" value="1e-6" step="any">
+        </label>
+        <label>
+          Radio R (m): <input type="number" id="R" value="100" step="any">
+        </label>
+        <button id="toggleBtn">⏸ Pausar</button>
+      </div>
+      <canvas id="canvas" width="700" height="300"></canvas>
+      <div id="info-ley"></div>
+    </section>
+
+    <section class="simulacion-container">
+      <h2>Simulador de Potencial y Campo Eléctrico</h2>
+      <div id="botonera">
+        <button type="button" onclick="cambiarTipoCarga()">Tipo de carga: <span id="tipo">Positiva</span></button>
+        <button type="button" onclick="borrarCargas()">Borrar cargas</button>
+      </div>
+      <canvas id="lienzo" width="500" height="500"></canvas>
+      <div id="info-cargas">Haz clic para agregar cargas. Mueve el mouse para ver el potencial.</div>
+    </section>
+
+  </main>
+
+<div id="faqModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>❓ Preguntas Frecuentes</h2>
+    <details>
+      <summary>¿Qué es la electricidad?</summary>
+      <p>Es el conjunto de fenómenos relacionados con la presencia y movimiento de cargas eléctricas.</p>
+    </details>
+    <details>
+      <summary>¿Qué es el magnetismo?</summary>
+      <p>Es un fenómeno físico por el cual ciertos materiales ejercen fuerzas de atracción o repulsión.</p>
+    </details>
+    <details>
+      <summary>¿Dónde puedo hacer simulaciones?</summary>
+      <p>En la sección de <a href="simulaciones.html">Simulaciones</a> encontrarás actividades interactivas.</p>
+    </details>
+  </div>
+</div>
+
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <h3>ElectroMag Academy</h3>
+      <p>Aprende sobre electricidad y magnetismo</p>
+      <p>Simulaciones de forma clara y didáctica</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Enlaces útiles</h4>
+      <ul>
+        <li><a href="home.html">Inicio</a></li>
+        <li><a href="electricidad.html">Electricidad</a></li>
+        <li><a href="magnetismo.html">Magnetismo</a></li>
+        <li><a href="simulaciones.html">Simulaciones</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contacto</h4>
+      <p>Email: contacto@gmail.com</p>
+      <p>© 2025 ElectroMag Academy. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
