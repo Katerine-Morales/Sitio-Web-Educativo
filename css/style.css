@@ -328,6 +328,29 @@ button {
   padding: 8px;
 }
 
+.controls {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+.output {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
 .main-footer {
   background-color: #111;
   color: #f1f1f1;

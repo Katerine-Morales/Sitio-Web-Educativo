@@ -8,6 +8,7 @@
     <script defer src="../js/script.js"></script>
     <script defer src="../js/simulacion_1.js"></script>
     <script defer src="../js/simulacion_2.js"></script>
+    <script defer src="../js/simulacion_3.js"></script>
 </head>
 <body>
 <header id="main-header">
@@ -50,6 +51,26 @@
       </div>
       <canvas id="lienzo" width="500" height="500"></canvas>
       <div id="info-cargas">Haz clic para agregar cargas. Mueve el mouse para ver el potencial.</div>
+    </section>
+
+    <section class="simulacion-container">
+      <h2>🔌 Simulador de Corriente y Resistencia</h2>
+      <p>Usa los controles para ajustar la resistencia (Ω) y el voltaje (V) de una batería. Observa cómo cambia la corriente (I).</p>
+
+      <div id="botonera">
+        <label>🔋 Voltaje (V):
+          <input type="range" id="voltaje" min="1" max="20" value="10">
+          <strong><span id="vLabel">10</span> V</strong>
+        </label>
+        <label>📏 Resistencia (Ω):
+          <input type="range" id="resistencia" min="1" max="100" value="10">
+          <strong><span id="rLabel">10</span> Ω</strong>
+        </label>
+      </div>
+      <canvas id="circuito" width="600" height="200"></canvas>
+      <div id="info-cargas">
+        ⚡ Corriente: <strong><span id="corriente">1</span> A</strong> (I = V / R)
+      </div>
     </section>
 
   </main>
